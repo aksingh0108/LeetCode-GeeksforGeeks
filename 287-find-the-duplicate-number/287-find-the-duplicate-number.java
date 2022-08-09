@@ -14,11 +14,18 @@ class Solution {
     //         if(nums[i]==nums[i+1])return nums[i];
     //     }
          
-         //by hashMap
-         Map<Integer,Integer> map=new HashMap();
+        //  //by hashMap
+        //  Map<Integer,Integer> map=new HashMap();
+        // for(int i=0;i<nums.length;i++){
+        //     if(map.containsKey(nums[i]))return nums[i];
+        //     else map.put(nums[i],1);
+        
+        
+         //by HashSet
+         Set<Integer> set=new HashSet();
         for(int i=0;i<nums.length;i++){
-            if(map.containsKey(nums[i]))return nums[i];
-            else map.put(nums[i],1);
+            if(set.contains(nums[i]))return nums[i];
+            else set.add(nums[i]);
             
         }
          
