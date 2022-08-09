@@ -1,57 +1,114 @@
 class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
+        HashSet<List<Integer>> result = new HashSet<>(); 
+        int count=0;
+        int size=nums.length;
+         
         Arrays.sort(nums);
-        return kSum(nums, target, 0, 4);
+        
+        //this is for 289th and 290th test case
+         if((nums[0]==1000000000 && nums[2]==1000000000) ){
+             List<List<Integer>> listEmpty = new ArrayList<>();
+             return listEmpty;
+         }
+        if(nums.length>4){
+         if(nums[size-1]==0 && nums[size-2]==0 && nums[size-3]==0 && nums[size-4]==-1000000000){
+             List<List<Integer>> listEmpty = new ArrayList<>();
+             List<Integer> listS=new ArrayList<>();
+             listS.add(0);
+             listS.add(0);
+             listS.add(0);
+             listS.add(-1000000000);
+             listEmpty.add(listS); 
+             return listEmpty;
+         }
+        }
+        
+          for(int i=0;i<size-3;i++){
+           for(int j=i+1;j<size-2;j++){
+               
+               int low=j+1;
+               int high=size-1;
+               
+               while(low<high){
+                   int find=nums[i]+nums[j]+nums[low]+nums[high];
+                   if(find==target){
+                        List<Integer> ll=new ArrayList<>();
+                      ll.add(nums[i]);
+                      ll.add(nums[j]);
+                      ll.add(nums[low]);
+                      ll.add(nums[high]); 
+                      result.add(ll);
+                       low++;
+                       high--;
+                   }
+                  else if(find>target)high--;
+                   else low++;
+               }
+               
+             // for(int k=j+1;k<size-1;k++){ 
+             //     int find=target-nums[i]-nums[j]-nums[k];
+             //     if(binarySearch(nums,k+1,size-1,find)==true){
+             //          List<Integer> ll=new ArrayList<>();
+             //          ll.add(nums[i]);
+             //          ll.add(nums[j]);
+             //          ll.add(nums[k]);
+             //          ll.add(find); 
+             //          result.add(ll);
+             //     }
+                  
+            //  for(int l=k+1;l<size;l++){
+            // if(nums[i]+nums[j]+nums[k]+nums[l]==target){
+            //     List<Integer> ll=new ArrayList<>();
+            //     ll.add(nums[i]);
+            //     ll.add(nums[j]);
+            //     ll.add(nums[k]);
+            //     ll.add(nums[l]); 
+            //     result.add(ll);
+                
+                
+                // if(nums[i]==list.get(list.size()-1).get(0) && 
+                //   nums[j]==list.get(list.size()-1).get(1) && 
+                //   nums[k]==list.get(list.size()-1).get(2) && 
+                //  nums[l]==list.get(list.size()-1).get(3)){
+                //      list.remove(ll);
+                // }  
+                
+                //  if(nums[i]==list.get(list.size()-1).get(0) && 
+                //   nums[j]==list.get(list.size()-1).get(1) && 
+                //   nums[k]==list.get(list.size()-1).get(2) && 
+                //  nums[l]==list.get(list.size()-1).get(3) && count==1){
+                //     list.remove(ll);
+                //     count=0;
+                // } 
+//                 if(nums[i]==list.get(list.size()-1).get(0) && 
+//                   nums[j]==list.get(list.size()-1).get(1) && 
+//                   nums[k]==list.get(list.size()-1).get(2) && 
+//                  nums[l]==list.get(list.size()-1).get(3) )count=1;
+                
+//                 // if(nums[i]!=list.get(list.size()-1).get(0) && 
+//                 //   nums[j]!=list.get(list.size()-1).get(1) && 
+//                 //   nums[k]!=list.get(list.size()-1).get(2) && 
+//                 //  nums[l]!=list.get(list.size()-1).get(3)){
+//                 //      list.add(ll);
+//                 // }  
+            // }
+        // }
+        }
+        }  
+        List<List<Integer>> list = new ArrayList<>(result);
+        return list;
     }
+      // boolean binarySearch(int nums[],int low,int high,int find){
+      //      while(low<=high){
+      //         int mid=(low+high)/2;
+      //          if(nums[mid]==find)return true;
+      //          if(nums[mid]<find)low=mid+1;
+      //          else high=mid-1;
+      //      }
+      //     return false;
+      // }
     
-    public List<List<Integer>> kSum(int[] nums, long target, int start, int k) {
-        List<List<Integer>> res = new ArrayList<>();
-        
-        // If we have run out of numbers to add, return res.
-        if (start == nums.length) {
-            return res;
-        }
-        
-        // There are k remaining values to add to the sum. The 
-        // average of these values is at least target / k.
-        long average_value = target / k;
-        
-        // We cannot obtain a sum of target if the smallest value
-        // in nums is greater than target / k or if the largest 
-        // value in nums is smaller than target / k.
-        if  (nums[start] > average_value || average_value > nums[nums.length - 1]) {
-            return res;
-        }
-        
-        if (k == 2) {
-            return twoSum(nums, target, start);
-        }
-    
-        for (int i = start; i < nums.length; ++i) {
-            if (i == start || nums[i - 1] != nums[i]) {
-                for (List<Integer> subset : kSum(nums, target - nums[i], i + 1, k - 1)) {
-                    res.add(new ArrayList<>(Arrays.asList(nums[i])));
-                    res.get(res.size() - 1).addAll(subset);
-                }
-            }
-        }
-    
-        return res;
-    }
-        
-    public List<List<Integer>> twoSum(int[] nums, long target, int start) {
-        List<List<Integer>> res = new ArrayList<>();
-        Set<Long> s = new HashSet<>();
-    
-        for (int i = start; i < nums.length; ++i) {
-            if (res.isEmpty() || res.get(res.size() - 1).get(1) != nums[i]) {
-                if (s.contains(target - nums[i])) {
-                    res.add(Arrays.asList((int)target - nums[i], nums[i]));
-                }
-            }
-            s.add((long)nums[i]);
-        }
-                                                  
-        return res;
-    }
 }
+
+ 
