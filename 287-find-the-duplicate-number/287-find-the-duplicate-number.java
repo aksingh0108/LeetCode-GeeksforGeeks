@@ -22,12 +22,17 @@ class Solution {
         
         
          //by HashSet
-         Set<Integer> set=new HashSet();
-        for(int i=0;i<nums.length;i++){
-            if(set.contains(nums[i]))return nums[i];
-            else set.add(nums[i]);
-            
+        //  Set<Integer> set=new HashSet();
+        // for(int i=0;i<nums.length;i++){
+        //     if(set.contains(nums[i]))return nums[i];
+        //     else set.add(nums[i]); 
+        // }
+        
+        Arrays.sort(nums);
+        for(int i=0;i<nums.length-1;i++){
+            if(nums[i]==nums[i+1])return nums[i];
         }
+        
          
         return 0;
     }
