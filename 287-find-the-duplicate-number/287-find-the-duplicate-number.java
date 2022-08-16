@@ -33,6 +33,7 @@ class Solution {
         //     if(nums[i]==nums[i+1])return nums[i];
         // }
         
+        //Floyd's cycle finding Algorithm.
         int slow=nums[0];
         int fast=nums[0];
         
