@@ -7,8 +7,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0001-two-sum) |
+| [0035-search-insert-position](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0035-search-insert-position) |
 ## Hash Table
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0001-two-sum) |
+## Binary Search
+|  |
+| ------- |
+| [0035-search-insert-position](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0035-search-insert-position) |
 <!---LeetCode Topics End-->
