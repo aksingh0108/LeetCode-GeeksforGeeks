@@ -13,6 +13,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0001-two-sum) |
+| [0013-roman-to-integer](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0013-roman-to-integer) |
 | [0920-uncommon-words-from-two-sentences](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0920-uncommon-words-from-two-sentences) |
 ## Binary Search
 |  |
@@ -21,6 +22,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## String
 |  |
 | ------- |
+| [0013-roman-to-integer](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0013-roman-to-integer) |
 | [0179-largest-number](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0179-largest-number) |
 | [0241-different-ways-to-add-parentheses](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0241-different-ways-to-add-parentheses) |
 | [0920-uncommon-words-from-two-sentences](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0920-uncommon-words-from-two-sentences) |
@@ -39,6 +41,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Math
 |  |
 | ------- |
+| [0013-roman-to-integer](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0013-roman-to-integer) |
 | [0241-different-ways-to-add-parentheses](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0241-different-ways-to-add-parentheses) |
 ## Dynamic Programming
 |  |
