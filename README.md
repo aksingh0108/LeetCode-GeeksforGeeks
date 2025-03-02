@@ -9,6 +9,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0001-two-sum](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0001-two-sum) |
 | [0035-search-insert-position](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0035-search-insert-position) |
 | [0179-largest-number](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0179-largest-number) |
+| [2551-apply-operations-to-an-array](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/2551-apply-operations-to-an-array) |
 ## Hash Table
 |  |
 | ------- |
@@ -55,4 +56,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0241-different-ways-to-add-parentheses](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/0241-different-ways-to-add-parentheses) |
+## Two Pointers
+|  |
+| ------- |
+| [2551-apply-operations-to-an-array](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/2551-apply-operations-to-an-array) |
+## Simulation
+|  |
+| ------- |
+| [2551-apply-operations-to-an-array](https://github.com/aksingh0108/LeetCode-GeeksforGeeks/tree/master/2551-apply-operations-to-an-array) |
 <!---LeetCode Topics End-->
